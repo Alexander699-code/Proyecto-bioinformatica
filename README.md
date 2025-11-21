@@ -14,27 +14,27 @@ Objetivos Específicos
 
 Programas que usaremos:
 
-### Gestión de ambiente
+# Gestión de ambiente
 - Conda
 
-### Control de calidad
+#Control de calidad
 - FastQC
 - Fastp
 
-### Ensamblaje
+# Ensamblaje
 - SPAdes
 
-### Anotación
+# Anotación
 - Prokka
 
-### Visualización
+# Visualización
 - Proksee
 
-### Identificación de genes de resistencia
+# Identificación de genes de resistencia
 - ABRicate
 
-### Análisis de mutaciones puntuales (SNPs)
+# Análisis de mutaciones puntuales (SNPs)
 - Snippy
 
-### Interpretación funcional de variantes
+# Interpretación funcional de variantes
 - SnpEff
