@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# ================================
+# 1. INSTALACIÓN DE MINICONDA
+# ================================
+# Descargar miniconda (Linux x86_64)
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+# Dar permisos de ejecución
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+
+# Instalacion de miniconda
+./Miniconda3-latest-Linux-x86_64.sh
+
+# Activar conda en la terminal
+source ~/.bashrc
+
+# 2. CREACIÓN DEL ENTORNO BIOINFO
+
+conda create -n bioinfo python=3.10 -y
+
+# Activar entorno
+conda activate bioinfo
+
+
+# ================================
+# 3. INSTALAR DEPENDENCIAS
+# ================================
+conda install biopython reportlab -y
+
+
+# ================================
+# 4. EJECUTAR VISUALIZACIÓN
+# ================================
+# Asume que el usuario ya tiene un archivo GenBank local,
+# por ejemplo: data/mi_genoma.gbff
+
+python scripts/visualizar_genoma.py
