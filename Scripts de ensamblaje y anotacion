@@ -1,0 +1,29 @@
+Instalamos Miniconda en wsl 
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+source ~/.bashrc
+
+#creamos la dependencia 
+conda create -y -n bioinfo fastqc fastp spades prokka
+conda activate bioinfo
+#Ejecutamos Fastqc
+fastqc ERR3518912_trim_sampl_PER2_R1.fastq.gz ERR3518912_trim_sampl_PER2_R2.fastq.gz
+#observamos la calidad en estos archivos
+ERR3518912_trim_sampl_PER2_R1_fastqc.html
+ERR3518912_trim_sampl_PER2_R2_fastqc.html
+#Ensamblamos 
+spades.py --careful \
+-1 ERR3518912_trim_sampl_PER2_R1.fastq.gz \
+-2 ERR3518912_trim_sampl_PER2_R2.fastq.gz \
+-o spades_output
+#obtenemos estos archivos
+spades_output/contigs.fasta
+spades_output/scaffolds.fasta
+#observamos la calidad con quast
+quast spades_output/contigs.fasta -o quast_output
+#Anotamos
+prokka contigs.fasta --outdir prokka_OK --prefix klebsiella
+#se generara este archivo
+prokka_ok/klebsiella.gbk
+#Observamos el genoma en https://cgview.ca/ y cargamos el archivo gbk
