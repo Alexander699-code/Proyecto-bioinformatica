@@ -1,5 +1,10 @@
 Caracterización de Genes y Mutaciones Asociadas a Resistencia Antimicrobiana en una Cepa Clínica de Klebsiella pneumoniae Aislada en Lima
 
+Hipotesis:
+La cepa clínica de K. pneumoniae aislada en Lima contiene genes y mutaciones puntuales asociadas a resistencia antimicrobiana que pueden ser detectados mediante análisis genómico
+Que esperaria: 
+Se espera identificar mutaciones puntuales en genes como gyrA, parC, ompK36 o mgrB, que han sido asociadas en estudios previos a resistencia frente a antibióticos de última generación, incluyendo carbapenémicos y colistina
+
 Objetivo general:
 
 Detección de Genes AMR y Mutaciones en una Cepa de Klebsiella pneumoniae MDR aislada de muestra clinica de Lima, Perú
@@ -33,9 +38,5 @@ Interpretación funcional de variantes
 •	SnpEff
 
 
-Hipotesis:
-La cepa clínica de K. pneumoniae aislada en Lima contiene genes y mutaciones puntuales asociadas a resistencia antimicrobiana que pueden ser detectados mediante análisis genómico
-Que esperaria: 
-Se espera identificar mutaciones puntuales en genes como gyrA, parC, ompK36 o mgrB, que han sido asociadas en estudios previos a resistencia frente a antibióticos de última generación, incluyendo carbapenémicos y colistina
 
 
