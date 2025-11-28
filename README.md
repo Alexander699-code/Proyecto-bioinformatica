@@ -32,3 +32,10 @@ Análisis de mutaciones puntuales (SNPs)
 Interpretación funcional de variantes
 •	SnpEff
 
+
+Hipotesis:
+La cepa clínica de K. pneumoniae aislada en Lima contiene genes y mutaciones puntuales asociadas a resistencia antimicrobiana que pueden ser detectados mediante análisis genómico
+Que esperaria: 
+Se espera identificar mutaciones puntuales en genes como gyrA, parC, ompK36 o mgrB, que han sido asociadas en estudios previos a resistencia frente a antibióticos de última generación, incluyendo carbapenémicos y colistina
+
+
