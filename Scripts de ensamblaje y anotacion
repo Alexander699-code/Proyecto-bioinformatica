@@ -27,3 +27,10 @@ prokka contigs.fasta --outdir prokka_OK --prefix klebsiella
 #se generara este archivo
 prokka_ok/klebsiella.gbk
 #Observamos el genoma en https://cgview.ca/ y cargamos el archivo gbk
+#### usamos snippy
+snippy --outdir snippy_mutante_vs_ref \
+       --ref ref_klebsiella.fasta \
+       --R1 ERR3518912_trim_samp1_PER2_R1.fastq.gz \
+       --R2 ERR3518912_trim_samp1_PER2_R2.fastq.gz \
+       --cpus 4
+
