@@ -43,5 +43,24 @@ esearch -db nucleotide -query "NC_016845.1" \
 #si queremos anotar en simultaneo usamops prokka
 prokka klebsiella_genome.1.gb --outdir anotacion_1 --prefix genome1
 prokka klebsiella_genome.2.gb --outdir anotacion_2 --prefix genome2
+..............................................................................................................
+## Instalacion de artemis 
+descargamos java de aca https://adoptium.net/es/temurin/releases?version=11
+Descargamos artemis https://github.com/sanger-pathogens/Artemis/releases
+"hacemos clicl en artemis-windows-release-18.2.zip, 
+##extraemos y luego ejectuamos artemis.jar
+## subimos a artemis el gen con formato gbk
+##para ver los genes de resistencia se debe convertir el archivo tsv de abricate o carda hacia gff
+
+usamos este codigo
+awk -F'\t' 'NR>1 && $2 && $3 && $4 && $5 && $6 && $14 {
+  gsub(/[ ;]/, "_", $6); gsub(/[ ;]/, "_", $14);
+  print $2 "\tabricate\tAMR\t" $3 "\t" $4 "\t.\t" $5 "\t.\tID=" $6 ";Name=" $6 ";Product=" $14
+}' genome1_card.tsv > genome1_card.gff
+
+## finalmente observamos los genes en artemis
+
+
+
 
 
