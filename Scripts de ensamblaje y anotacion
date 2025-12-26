@@ -5,7 +5,7 @@ chmod +x Miniconda3-latest-Linux-x86_64.sh
 source ~/.bashrc
 
 #creamos la dependencia 
-conda create -y -n bioinfo fastqc fastp spades prokka
+conda create -y -n bioinfo fastqc fastp spades prokka abricate entrez-direct
 conda activate bioinfo
 #Ejecutamos Fastqc
 fastqc ERR3518912_trim_sampl_PER2_R1.fastq.gz ERR3518912_trim_sampl_PER2_R2.fastq.gz
