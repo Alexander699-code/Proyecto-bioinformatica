@@ -33,4 +33,15 @@ snippy --outdir snippy_mutante_vs_ref \
        --R1 ERR3518912_trim_samp1_PER2_R1.fastq.gz \
        --R2 ERR3518912_trim_samp1_PER2_R2.fastq.gz \
        --cpus 4
+..................................................................................................................
+## si queremos bajar secuencias fasta instalamos Entrez para que conecte al ncbi
+conda create -n edirect_env -c bioconda entrez-direct
+conda activate edirect_env
+# buscamos el numero de accesion, señalamos el formato fasta y le ponemos el nombre 
+esearch -db nucleotide -query "NC_016845.1" \
+| efetch -format fasta > klebsiella_genome.fasta
+#si queremos anotar en simultaneo usamops prokka
+prokka klebsiella_genome.1.gb --outdir anotacion_1 --prefix genome1
+prokka klebsiella_genome.2.gb --outdir anotacion_2 --prefix genome2
+
 
